@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+a{
+    text-decoration: none !important;
+}
+.text-theme-blue{
+    color:#13509f;
+}
+
+.theme-blue{
+    background-color:#13509f;
+
+}
+.text-theme-red{
+    color: #d20028;
+}
+
+.dja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.z{
+    z-index: 99;
+}
+.z1{
+    z-index: 999999999;
+}
+.z2{
+    z-index: 9999999999;
+}
+
+.banner{
+    background-image: url(../img/banner.jpg);
+    width: 100%;
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btns{
+    color: white;
+    border:white 2px solid;
+    border-radius: 5px;
+    padding: 7px 18px;
+    background: transparent;
+}
+
+@media (max-width:992px) {
+
+    header .border-end{
+        border: 0 !important;
+    }
+
+}
+
+.students-says .carousel-wrap .owl-nav {
+    display: block !important;
+    text-align: center;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100%;
+}
+
+
+.gallery{
+	width: 100%;
+	padding: 0 15px;
+}
+.gallery .gallery-inner img{
+	display:block;
+	width: 100%;
+	padding: 0 2px;
+}
+.gallery .gallery-inner .gallery-content{
+	position: relative;	
+	transition: 0.4s all;
+}
+.gallery .gallery-inner .gallery-content .gallery-text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    text-align: center;	
+}
+.gallery .gallery-inner .gallery-content .gallery-text h3{
+	font-size: 14px;
+	font-weight: 900;
+	color: #000;
+	margin-bottom: 5px;
+}
+.gallery .gallery-inner .gallery-content .gallery-text p{
+	font-size: 10px;
+	font-weight: 500;
+	color: #939393;
+}
+.gallery .gallery-inner .gallery-content:hover{
+	transform: translateY(-110px);
+}
+
+.footer-img{
+    background-image: url(../img/Group\ 1390.png);
+    /* height: 630px; */
+    background-size: cover;
+     width: 100%; 
+    background-repeat: no-repeat;
+  }
+
+
+  .about-banner{
+    background-image: url(../img/aboutbanner.jpg);
+    width: 100%;
+    height: 55vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
