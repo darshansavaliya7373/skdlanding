@@ -62,7 +62,8 @@
                                 <a href="/contact.html" class="m-2 z1 text-theme-blue fw-medium fs-6"><i
                                         class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;&nbsp; Contact Us </a>
                                 <hr>
-                                <a href="#"  id="downloadButton" class="m-2 text-theme-blue fw-medium fs-6"><i class="fa-solid fa-download"></i> &nbsp;&nbsp;&nbsp;&nbsp;Download App</a>
+                                <a href="#" id="downloadButton" class="m-2 text-theme-blue fw-medium fs-6"><i
+                                        class="fa-solid fa-download"></i> &nbsp;&nbsp;&nbsp;&nbsp;Download App</a>
                                 <hr>
                             </div>
                             <div class="d-flex flex-wrap">
@@ -137,7 +138,7 @@
                                 class="text-theme-red">*</span></a>
                         <a href="/contact.html" class="m-2 text-theme-blue fw-medium fs-6">Contact Us <span
                                 class="text-theme-red">*</span></a>
-                        <a href="#"  id="downloadButton" class="m-2 text-theme-blue fw-medium fs-6">Download App <span
+                        <a href="#" id="downloadButton" class="m-2 text-theme-blue fw-medium fs-6">Download App <span
                                 class="text-theme-red">*</span></a>
                     </div>
                 </div>
@@ -574,23 +575,23 @@
         </section>
     </main>
 
-<script>
-    // Function to trigger file download
-    function downloadFile() {
-        var filePath = 'apps/app-release.apk'; // Relative path to your APK file
+    <script>
+        // Function to trigger file download
+        function downloadFile() {
+            var filePath = 'apps/app-release.apk'; // Relative path to your APK file
 
-        // Create a dummy <a> element to trigger the download
-        var downloadLink = document.createElement('a');
-        downloadLink.href = filePath;
-        downloadLink.download = filePath.split('/').pop(); // Extracting filename from the path
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-    }
+            // Create a dummy <a> element to trigger the download
+            var downloadLink = document.createElement('a');
+            downloadLink.href = filePath;
+            downloadLink.download = filePath.split('/').pop(); // Extracting filename from the path
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
 
-    // Attach click event listener to the button
-    document.getElementById('downloadButton').addEventListener('click', downloadFile);
-</script>
+        // Attach click event listener to the button
+        document.getElementById('downloadButton').addEventListener('click', downloadFile);
+    </script>
 
     <footer class="footer-pt pt-5">
         <div class="footer-img py-5">
