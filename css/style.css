@@ -11,6 +11,25 @@ a{
     color:#13509f;
 }
 
+    
+    /* Main scrollbar styles */
+    body::-webkit-scrollbar {
+    width: 1em;
+    }
+    
+    body::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0); */
+    }
+    
+    body::-webkit-scrollbar-thumb {
+    background-image: url(../img/1222-cw-news-composite-rebar-GettyImages1__1_-removebg-preview.png),
+        linear-gradient(100deg, transparent, transparent);
+    background-position: center bottom, center -40px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    }
+    
+
 .theme-blue{
     background-color:#13509f;
 
@@ -36,11 +55,16 @@ a{
 }
 
 .banner{
-    background-image: url(https://bestfiberglassrebar.com/wp-content/uploads/2018/07/fiberglass-rebar-sale.jpg);
+    /* background-image: url(https://bestfiberglassrebar.com/wp-content/uploads/2018/07/fiberglass-rebar-sale.jpg); */
+    background-image: url(../img/IMG_8188.PNG);
+    /* background-image: url(https://gfrprebartechnology.com/img/varillas-prfv/varilla-polimero-reforzado-fibra-de-vidrio-prfv-gfrp-fabricante-distribuidor-spain-leon-rebar-rod.jpg); */
+    background-position: bottom right;
     width: 100%;
     height: 85vh;
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
+
 }
 
 .btns{
