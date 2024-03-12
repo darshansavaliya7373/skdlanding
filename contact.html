@@ -213,7 +213,7 @@
                         </div>
                     </div>
                     <div class="mt-3 w-100 class d justify-content-start">
-                        <button type="submit" class="theme-blue p-2 rounded-pill px-3 border-0 text-white fw-2">submit form</button>
+                        <button type="button" class="theme-blue p-2 submit rounded-pill px-3 border-0 text-white fw-2">submit form</button>
                     </div>
                 </form>
             </div>
@@ -323,7 +323,6 @@
         }
     });
 
-    <!-- Include jQuery library -->
 
     // Function to handle form submission
     function submitForm(event) {
@@ -352,7 +351,7 @@
     }
 
     // Add event listener to form submission
-    $('form').on('submit', submitForm);
+    $('.submit').on('click', submitForm);
 </script>
 
 
