@@ -297,6 +297,8 @@
     </footer>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
 
     $('.owl-carousel').owlCarousel({
@@ -321,41 +323,38 @@
         }
     });
 
+    <!-- Include jQuery library -->
+
     // Function to handle form submission
     function submitForm(event) {
         event.preventDefault(); // Prevent default form submission behavior
 
         // Gather form data
         var formData = {
-            first: document.querySelector('input[name="first"]').value,
-            last: document.querySelector('input[name="last"]').value,
-            email: document.querySelector('input[name="email"]').value,
-            subject: document.querySelector('input[name="subject"]').value,
-            message: document.querySelector('textarea[name="message"]').value
+            first: $('input[name="first"]').val(),
+            last: $('input[name="last"]').val(),
+            email: $('input[name="email"]').val(),
+            subject: $('input[name="subject"]').val(),
+            message: $('textarea[name="message"]').val()
         };
 
-        // Send AJAX POST request
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://154.41.254.204:7000', true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
-                    // Handle successful response
-                    console.log('Form data sent successfully.');
-                    // You can add further actions here after successful form submission
-                } else {
-                    // Handle error response
-                    console.error('Error sending form data:', xhr.statusText);
-                }
-            }
-        };
-        xhr.send(JSON.stringify(formData));
+        // Send AJAX POST request using jQuery
+        $.post('http://154.41.254.204:7000', formData)
+            .done(function(response) {
+                // Handle successful response
+                console.log('Form data sent successfully:', response);
+                // You can add further actions here after successful form submission
+            })
+            .fail(function(jqXHR, textStatus, errorThrown) {
+                // Handle error response
+                console.error('Error sending form data:', textStatus, errorThrown);
+            });
     }
 
     // Add event listener to form submission
-    document.querySelector('form').addEventListener('submit', submitForm);
+    $('form').on('submit', submitForm);
 </script>
+
 
 
 </html>
