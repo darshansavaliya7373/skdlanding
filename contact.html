@@ -184,7 +184,7 @@
                         </div>
                     </div>
                 </div>
-                  <form class="dja col-lg-8 ps-lg-5 flex-wrap" action="http://154.41.254.204:7000" target="_blank" method="get">
+                  <form class="dja col-lg-8 ps-lg-5 flex-wrap" >
                       <div class="dja col-12 flex-wrap">
                           <div class="col-lg-6 col-12 px-2">
                             <p class="mt-3 mb-1">First Name</p>
@@ -321,7 +321,41 @@
         }
     });
 
+    // Function to handle form submission
+    function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission behavior
 
+        // Gather form data
+        var formData = {
+            first: document.querySelector('input[name="first"]').value,
+            last: document.querySelector('input[name="last"]').value,
+            email: document.querySelector('input[name="email"]').value,
+            subject: document.querySelector('input[name="subject"]').value,
+            message: document.querySelector('textarea[name="message"]').value
+        };
+
+        // Send AJAX POST request
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://154.41.254.204:7000', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Handle successful response
+                    console.log('Form data sent successfully.');
+                    // You can add further actions here after successful form submission
+                } else {
+                    // Handle error response
+                    console.error('Error sending form data:', xhr.statusText);
+                }
+            }
+        };
+        xhr.send(JSON.stringify(formData));
+    }
+
+    // Add event listener to form submission
+    document.querySelector('form').addEventListener('submit', submitForm);
 </script>
+
 
 </html>
