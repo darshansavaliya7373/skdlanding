@@ -16,6 +16,20 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js"></script>
+    <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=GoogleTranslateElementInit"></script>
+<script>
+    function GoogleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {
+                pageLanguage: 'en', // Default language
+                includedLanguages: 'en,hi,bn,te,mr,ta,gu,kn,ml,pa,ur,or', // Default
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE // Widget layout
+            },
+            'google_translate_element' // Target element
+        );
+    }
+</script>
 </head>
 
 <body>
@@ -27,7 +41,8 @@
                         <img src="img/sdk.png" height="60px" alt="">
                     </a>
                 </div>
-                <div class="d-lg-none">
+                <div class="d-lg-none d-flex">
+                    <div id="google_translate_element" class="dja me-3"></div>
                     <a class="fs-1 text-dark" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         <i class="fa-solid fa-bars"></i>
@@ -129,6 +144,7 @@
                         <a href="/applications.html" class="m-2 text-theme-blue fw-medium fs-6">Applications</a>
                         <a href="/faq.html" class="m-2 text-theme-blue fw-medium fs-6">FAQs</a>
                         <a href="/contact.html" class="m-2 text-theme-blue fw-medium fs-6">Contact Us</a>
+                        <div id="google_translate_element" class="dja"></div>
                     </div>
                 </div>
             </div>
